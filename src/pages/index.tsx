@@ -9,9 +9,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [link, setLink] = useState("");
-  const handleWebAssembly = (e: string) => {
+
+  const handleLink = (e: string) => {
     setLink(e);
   };
+
+  const handleWebAssembly = () => {
+    console.log(link);
+  };
+
   return (
     <>
       <Head>
@@ -22,17 +28,20 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.description}>
-          <p className="text-2xl font-bold">
+          <p className="text-2xl font-bold text-zinc-500">
             Coloque o seu video logo a baixo!
           </p>
-          <div className="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
+          <div className="md:container md:mx-auto justify-items-stretch">
             <input
-              onChange={(e) => handleWebAssembly(e.target.value)}
+              onChange={(e) => handleLink(e.target.value)}
               type="text"
-              className="border-2 border-white rounded-md p-3 border-gray-300 bg-slate-300 w-10"
+              className="border-2 rounded-md p-3 border-gray-300 bg-slate-300 md:w-4/6 mx-auto"
               placeholder="Coloque o seu video aqui"
             />
-            <button className="p-2 bg-blue-400">
+            <button
+              onClick={handleWebAssembly}
+              className="border-box h-full ml-1 p-4 bg-blue-400 rounded-md"
+            >
               <AiOutlineSend />
             </button>
           </div>
