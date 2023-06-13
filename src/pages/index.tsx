@@ -31,16 +31,16 @@ export default function Home() {
           <p className="text-2xl font-bold text-zinc-500">
             Coloque o seu video logo a baixo!
           </p>
-          <div className="md:container md:mx-auto justify-items-stretch">
+          <div className="grid grid-cols-3 justify-items-stretch">
             <input
               onChange={(e) => handleLink(e.target.value)}
               type="text"
-              className="border-2 rounded-md p-3 border-gray-300 bg-slate-300 md:w-4/6 mx-auto"
+              className="border-2 rounded-md p-3 border-gray-300 bg-slate-300 md:w-2/3"
               placeholder="Coloque o seu video aqui"
             />
             <button
               onClick={handleWebAssembly}
-              className="border-box h-full ml-1 p-4 bg-blue-400 rounded-md"
+              className="h-full p-3 bg-blue-400 rounded-md md:w-1/3"
             >
               <AiOutlineSend />
             </button>
