@@ -1,8 +1,7 @@
 .main {
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-self: center;
   padding: 6rem;
   min-height: 100vh;
   width: 100%;
@@ -12,12 +11,13 @@
 .description {
   display: column;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   font-size: 0.85rem;
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
+  background-color: black;
 }
 
 .description a {
