@@ -27,22 +27,22 @@ export default function Home() {
       </Head>
       <main className={`${styles.main}`}>
         <div className={styles.description}>
-          <div className="justify-itens-center">
+          <div className="grid justify-items-center">
             <p className="text-2xl font-bold text-zinc-500 justify-self-center">
               Put the video link right here!
             </p>
-            <div className="justify-self-center">
+            <div className="flex w-full space-y-0.5">
               <input
                 onChange={(e) => handleLink(e.target.value)}
                 type="text"
-                className="border-2 rounded-md p-3 border-gray-300 bg-slate-300 w-10"
-                placeholder="Coloque o seu video aqui"
+                className="grow h-14 border-2 rounded-md p-3 border-gray-300 bg-slate-300"
+                placeholder="Put the link here..."
               />
               <button
                 onClick={handleWebAssembly}
-                className="h-full p-3 bg-blue-400 rounded-md"
+                className="grid place-items-center bg-blue-400 rounded-md h-14 w-14 flex-none"
               >
-                <AiOutlineSend />
+                <AiOutlineSend size={25} />
               </button>
             </div>
           </div>
